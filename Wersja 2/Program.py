@@ -1,19 +1,26 @@
 import openai
 import os
+from dotenv import load_dotenv
 
 #Ustawia klucz API OpenAI
-openai.api_key = "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"
+load_dotenv()  # Ładuje zmienne z pliku .env
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #Funkcja odczytania pliku tekstowego
 def read_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return file.read()
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return file.read()
+    except FileNotFoundError:
+        print(f"Błąd: Plik {file_path} nie został znaleziony.")
+        exit(1)
     
 #Funckdja do zapisania kodu HTML do pliku
 def save_to_file(file_path, content):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
-
+    print(f"Plik został zapisany w {file_path}")
+    
 #Tresc artykulu
 article_content = read_file('Artykul.txt')
 
