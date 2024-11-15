@@ -24,6 +24,7 @@ Zawiera 4 pliki (artykul.html, Artykul.txt, Program.py, szablon.html). Szablon z
 
 Po wykonaniu tych akcji powinna poprawnie wczytać się strona wraz z treścią artykułu 
 
+# Safety first
 Ze względów bezpieczeństwa został stworzony plik .env który jest ignorowany. Struktura pliku .env wygląda następująco:
 
 ```bash
