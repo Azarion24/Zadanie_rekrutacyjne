@@ -23,3 +23,10 @@ Zawiera 4 pliki (artykul.html, Artykul.txt, Program.py, szablon.html). Szablon z
 3. Otwórz przeglądarkę i przejdź pod adres: http://localhost:8000/szablon.html.
 
 Po wykonaniu tych akcji powinna poprawnie wczytać się strona wraz z treścią artykułu 
+
+Ze względów bezpieczeństwa został stworzony plik .env który jest ignorowan. Jego pliku .env wygląda następująco:
+
+```bash
+OPENAI_API_KEY = "sk-proj-kp..."
+```
+Pomiędzy "..." należy wprowadzić poprawny klucz
